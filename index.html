@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+        integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo-div">
+                <div class="logo">K</div>
+                <p class="logo-text">Kanban İdarəetmə</p>
+            </div>
+            <div>
+                <input class="search-input" type="search" name="search" id="search" placeholder="🔍Tapşırıq axtar...">
+                <select class="filter-select" name="filter" id="filter">
+                    <option value="all">⚡Hamısı</option>
+                    <option value="Aşağı">🟢Aşağı</option>
+                    <option value="Orta">🟡Orta</option>
+                    <option value="Yüksək">🔴Yüksək</option>
+                </select>
+                <button class="new-task-btn" id="new-task-btn">+ Yeni Tapşırıq</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="taskModal" class="modal-overlay">
+            <div class="modal-box">
+                <h3>Yeni Tapşırıq</h3>
+
+                <label>Başlıq *</label>
+                <input type="text" placeholder="Məs: API inteqrasiyası">
+
+                <label>Açıqlama</label>
+                <textarea placeholder="Tapşırıq haqqında qısa qeyd..."></textarea>
+
+                <label>Prioritet dərəcəsi</label>
+                <select>
+                    <option value="Aşağı">Aşağı (Low)</option>
+                    <option value="Orta">Orta (Medium)</option>
+                    <option value="Yüksək">Yüksək (High)</option>
+                </select>
+
+                <div class="modal-buttons">
+                    <button id="closeModalBtn" class="btn-cancel">Ləğv et</button>
+                    <button id="saveModalBtn" class="btn-save">Yadda saxla</button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="kanban-board">
+            <div class="kanban-boards">
+                <div>
+                    <h4>🕧Gözləmədə</h4>
+                    <p class="count-p">0</p>
+                </div>
+                <hr>
+
+                <div class="task-part">
+                    <p>Burada tapşırıq yoxdur</p>
+                </div>
+            </div>
+            <div class="kanban-boards">
+                <div>
+                    <h4>🟡İcra Edilir</h4>
+                    <p class="count-p">0</p>
+                </div>
+                <hr>
+
+                <div class="task-part">
+                    <p>Burada tapşırıq yoxdur</p>
+                </div>
+            </div>
+            <div class="kanban-boards">
+                <div>
+                    <h4>🟢Tamamlanmış</h4>
+                    <p class="count-p">0</p>
+                </div>
+                <hr>
+
+                <div class="task-part">
+                    <p>Burada tapşırıq yoxdur</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/app.js"></script>
+</body>
