@@ -151,6 +151,18 @@ main {
     color: #fff;
 }
 
+.boards-sticky {
+    border-bottom: 1px solid grey; 
+    margin-bottom: 15px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+
 .kanban-board {
     display: flex;
     justify-content: space-between
@@ -312,4 +324,118 @@ hr {
     background-color: #F9FAFB;
     border: 2px dashed #4F46E5;
     border-radius: 12px;
+}
+
+
+@media screen and (min-width: 601px) and (max-width: 990px) {
+
+    header,
+    main {
+        width: 95%;
+    }
+
+    nav {
+        gap: 10px;
+        flex-direction: column;    
+    }
+
+    .kanban-board {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .task-part {
+        padding: 30px 10px;
+    }
+
+    .kanban-boards {
+        width: 98%;
+        min-height: 300px;
+        padding: 0 5px;
+        height: 100px;
+    }
+
+    .logo-div {
+        margin: auto;
+    }
+
+    .search-div {
+        gap: 50px;
+        margin: auto;
+    }
+
+
+    .modal-box {
+        width: 80%;
+        max-width: 400px;
+    }
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    header,
+    main {
+        width: 95%;
+        margin-top: 15px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo-div {
+        justify-content: center;
+        margin-bottom: 5px;
+    }
+
+    .search-input,
+    .filter-select,
+    .new-task-btn {
+        width: 100%;
+        margin-top: 5px;
+        box-sizing: border-box;
+    }
+
+
+    .kanban-board {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .kanban-boards {
+        width: 100%;
+        min-height: 250px;
+        max-height: 500px;
+        box-sizing: border-box;
+    }
+
+    .task-part {
+        width: 80%;
+        padding: 40px 20px;
+    }
+
+    .modal-box {
+        width: 90%;
+        padding: 16px;
+    }
+
+    .search-div {
+        width: 100%;
+    }
+
+    .task-card-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .task-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
 }
